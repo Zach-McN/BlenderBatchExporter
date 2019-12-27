@@ -65,7 +65,7 @@ def exportAll(exportFolder):
     objects = bpy.context.selected_objects
     for object in objects:
         bpy.ops.object.select_all(action='DESELECT')
-        object.select = True
+        object.select_set(True)
         # check to make sure only exporting meshes
         if object.type not in ['MESH']:
             continue
